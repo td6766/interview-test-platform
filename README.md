@@ -17,11 +17,11 @@ We have not been able to implent all the features, and have decided to ship the 
 
 ## Challenge
 
-How can you improve the code, so that we can ship it to our first customers without implementing all the missing features. We would like you give us the code that you would be happy to ship. You expected to only spend up to 1 hour on this.  
+How can you improve the code, so that we can ship it to our first customers without implementing all the missing features? We would like you give us the code, in a github repository, that you would be happy to ship. You expected to only spend up to 1 hour on this.  
 
 ## Requirements
 
-- This test needs .net core 3.1+ to run which you can download from [here](https://dotnet.microsoft.com/download))
+- This test needs .net core 3.1+ to run which you can download from [here](https://dotnet.microsoft.com/download)).
 
 ### To build the code use the command `dotnet build`
 
