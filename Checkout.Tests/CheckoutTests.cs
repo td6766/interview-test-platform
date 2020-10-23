@@ -39,7 +39,7 @@ namespace Checkout.Tests
             var till = new Till();
 
             // Act
-            new Till().Scan("AB");
+            till.Scan("AB");
             
             // Assert
             Assert.AreEqual(80.0, till.Total());
@@ -60,7 +60,7 @@ namespace Checkout.Tests
             Till till = new Till();
             
             // Act
-            till.Scan("AA"); till.Scan("A");
+            till.Scan("AA");
             
             Assert.AreEqual(100, till.Total());
         }
@@ -77,7 +77,7 @@ namespace Checkout.Tests
             // Assert
             Assert.AreEqual(45, till.Total());
         }
-
+        [Test]
         public void Given_ThreeItemsOfTypeA_TotalPrice_ShouldBe_130()
         {
             // Arrange
@@ -90,17 +90,31 @@ namespace Checkout.Tests
             Assert.AreEqual(130, till.Total());
         }
 
-                [Test]
-        public void Given_TwoAAItems_TotalPrice_ShouldBe_110()
+        [Test]
+        public void Given_TwoAAItems_TotalPrice_ShouldBe_180()// This is wrong so I changed it to be two AA items test should be
         {
             // Arrange
             Till till = new Till();
             
             // Act
-            till.Scan("Aa");
+            till.Scan("AAAA");
             
             // Assert
-            Assert.AreEqual(45, till.Total());
+            Assert.AreEqual(180, till.Total());
         }
+
+        [Test]
+        public void Given_7CItems_TotalPrice_ShouldBe_120()// Added an extra test to check the Max of 6 items
+        {
+            // Arrange
+            Till till = new Till();
+            
+            // Act
+            till.Scan("CCCCCCC");
+            
+            // Assert
+            Assert.AreEqual(120, till.Total());
+        }
+        
     }
 }
